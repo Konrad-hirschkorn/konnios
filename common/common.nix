@@ -33,9 +33,9 @@ in {
   };
 
   # Add GitHub token for Nix to avoid rate limits
-  # nix.extraOptions = ''
-  #   !include /run/secrets-rendered/nix-extra.conf
-  # '';
+  nix.extraOptions = ''
+    !include /run/secrets-rendered/nix-extra.conf
+  '';
 
   # Environment Variables
   environment.variables = {
